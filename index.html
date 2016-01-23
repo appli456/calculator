@@ -4,20 +4,88 @@
     <meta charset="UTF-8" http-equiv="content-type">
     <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, maximum-scale=1">
     <title>Calculator</title>
+    <link rel="stylesheet" href="CSS/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
+<div id="main">
+    <header>
+        <i class="fa fa-bars"></i>
+        <span class="pattern"></span>
+        <i class="fa fa-history"></i>
+    </header>
     <section>
         <div class="main-interface">
-            <div class="header">
-
-            </div>
             <div class="screen">
-
+                <div class="equation">
+                    <i class="fa fa-angle-left equation-arrow"></i>
+                    <span></span>
+                    <i class="fa fa-angle-right equation-arrow"></i>
+                </div>
+                <div class="number">
+                    <span>666</span>
+                </div>
             </div>
-        </div>
-        <div class="save">
+            <div class="button">
+                <div class="calculator-save">
+                    <button>MC</button>
+                    <button>MR</button>
+                    <button>M+</button>
+                    <button>M-</button>
+                    <button>MS</button>
+                    <button class="show-save">M<i class="fa fa-caret-down"></i></button>
+                </div>
+                <div class="more-sign">
+                    <button>%</button>
+                    <button>√</button>
+                    <button>x<sup>2</sup></button>
+                    <button><sup>1</sup>/x</button>
+                </div>
+                <div class="basic-sign">
+                    <!--第一行-->
+                    <button>%</button>
+                    <button>CE</button>
+                    <button>C</button>
+                    <button><i class="fa fa-caret-square-o-left"></i></button>
+                    <button>÷</button>
 
+                    <!--第二行-->
+                    <button>√</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>×</button>
+
+                    <!--第三行-->
+                    <button>x<sup>2</sup></button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>-</button>
+
+                    <!--第四行-->
+                    <button>x<sup>3</sup></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>+</button>
+
+                    <!--第五行-->
+                    <button><sup>1</sup>/x</button>
+                    <button>±</button>
+                    <button>0</button>
+                    <button>.</button>
+                    <button>=</button>
+                </div>
+            </div>
         </div>
     </section>
+</div>
+<div id="save">
+    <ul>
+        <li>历史记录</li>
+        <li>存储</li>
+    </ul>
+</div>
 </body>
 </html>

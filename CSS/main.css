@@ -1,4 +1,7 @@
-html, body, section, div {
+@font-face {
+    "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif
+}
+html, body, section, div, span, i, ul, li, button {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -6,11 +9,159 @@ html, body, section, div {
     box-sizing: border-box;
 }
 
-section {
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+
+header, section, #main, #save {
+    display: flex;
     background: #f2f2f2;
 }
 
+button {
+    border: 0 solid;
+}
+
+button:focus, button:hover, button:visited, button:link {
+    outline: thin;
+}
+
+#main {
+    flex-direction: column;
+}
+
+section, #save {
+    /*flex-direction: column;*/
+}
+
 div {
-    display: inline-block;
     overflow: hidden;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+header i, header span {
+    margin: 5px 20px;
+}
+header .fa-history {
+    float: right;
+}
+#save{
+
+}
+#main {
+    display: flex;
+    width: auto;
+}
+
+#save {
+    top: 0;
+    right: 0;
+    border-left: 1px solid #dadada;
+}
+
+#save li {
+    float: left;
+    padding: 5px;
+}
+
+@media all and (min-width: 811px) {
+    #main {
+        flex: auto;
+    }
+    #save {
+        flex: 0 0 360px;
+    }
+}
+
+@media all and (max-width: 810px) {
+    #main {
+        flex: 0 0 55.6%;
+    }
+    #save {
+        flex: 0 0 44.4%;
+    }
+
+}
+@media all and (max-width: 540px) {
+    #save {
+        display: none !important;
+    }
+    #main {
+        flex: 0 0 100%;
+    }
+}
+@media all and (max-height: 480px) {
+    .pattern {
+        display: none;
+    }
+}
+
+/*--------------主界面--------------*/
+.main-interface, .screen, .button {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+}
+
+/*------------主界面结束------------*/
+
+/*--------------当前算式-------------*/
+.equation {
+    color: #dadada;
+}
+
+.equation-arrow {
+    color: #20a5c3;
+}
+/*---------------当前算式结束---------------*/
+
+/*-----------------当前数字--------------------*/
+.number {
+    font-size: 36px;
+    font-weight: bold;
+}
+/*-----------------当前数字结束--------------------*/
+
+/*------------------存储类按钮---------------------*/
+.calculator-save {
+    border-bottom: 1px solid #dadada;
+    flex-flow: row nowrap;
+}
+.calculator-save button, .more-sign button {
+    flex: 0 0 auto;
+    background: #f2f2f2;
+    color: #616161;
+}
+
+.calculator-save button {
+    height: 32px;
+}
+
+.show-save {
+    display: none;
+}
+
+
+@media all and (min-width: 192px) {
+    .calculator-save button {
+        width: 16.666%;
+    }
+}
+
+@media all and (min-width: 480px) {
+    .calculator-save button {
+        width: 80px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    .show-save {
+        display: inline-block;
+    }
 }
