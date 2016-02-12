@@ -7,6 +7,10 @@ html, body, section, div, span, i, ul, li, button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html, body, #main, #save, section{
@@ -48,6 +52,8 @@ header i, header span {
 header .fa-history {
     float: right;
 }
+
+
 #main {
     display: flex;
     width: auto;
@@ -106,7 +112,6 @@ header .fa-history {
 
 /*--------------主界面--------------*/
 .main-interface, .screen, .button {
-    display: flex;
     flex: 0 0 100%;
     flex-direction: column;
 }
@@ -117,7 +122,9 @@ header .fa-history {
 
 /*------------------屏幕------------------*/
 .screen {
+    position: relative;
     height: 30%;
+    border-bottom: 1px solid #dadada;
 }
 /*-----------------屏幕结束-----------------*/
 
@@ -126,6 +133,7 @@ header .fa-history {
 
 /*--------------当前算式-------------*/
 .equation {
+    position: relative;
     color: #dadada;
 }
 
@@ -141,27 +149,24 @@ header .fa-history {
 
 /*-----------------当前数字--------------------*/
 .number {
+    position: relative;
     font-size: 36px;
     font-weight: bold;
+    width: 100%;
 }
 
 .number span {
     float: right;
 }
+
+
+
 /*-----------------当前数字结束--------------------*/
-
-
-/*------------------按钮总类-----------------------*/
-
-.button {
-    height: 70%;
-}
-
-/*-----------------结束按钮总类---------------------*/
 
 /*------------------存储类按钮---------------------*/
 .calculator-save {
-    border-bottom: 1px solid #dadada;
+    position: relative;
+    width: 100%;
     flex-flow: row nowrap;
 }
 .calculator-save button, .more-sign button {
@@ -211,8 +216,27 @@ header .fa-history {
     }
 }
 
+
 /*---------------存储类按钮结束------------*/
 
+/*------------------按钮总类-----------------------*/
+
+.button {
+    position: relative;
+    height: 70%;
+}
+
+/*-----------------结束按钮总类---------------------*/
+
+
+
+/*---------------其他按钮-----------------*/
+
+.calculator-sign {
+    height: 100%;
+}
+
+/*---------------其他按钮结束-----------------*/
 
 /*--------------- more sign --------------*/
 
