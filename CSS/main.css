@@ -1,7 +1,7 @@
 @font-face {
     "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif
 }
-html, body, section, div, span, i, ul, li, button {
+html, body, header, section, div, span, i, ul, li, button {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -30,6 +30,11 @@ header, section, #main, #save {
 
 button {
     border: 0 solid;
+    background: #f2f2f2;
+}
+
+button:hover{
+    background: #CFCFCF !important;
 }
 
 button:focus, button:hover, button:visited, button:link {
@@ -273,6 +278,7 @@ header .fa-history {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    background: #e6e6e6;
 }
 
 /*--------------- end basic sign -------------------*/

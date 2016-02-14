@@ -10,9 +10,9 @@
 <body>
 <div id="main">
     <header class="icon-kind">
-        <button><i class="fa fa-bars"></i></button>
+        <button data-button-type="bars"><i class="fa fa-bars"></i></button>
         <span class="pattern"></span>
-        <button><i class="fa fa-history"></i></button>
+        <button data-button-type="history"><i class="fa fa-history"></i></button>
     </header>
     <section>
         <div class="main-interface">
@@ -28,57 +28,57 @@
                     <span>666</span>
                 </div>
                 <div class="calculator-save">
-                    <button>MC</button>
-                    <button>MR</button>
-                    <button>M+</button>
-                    <button>M-</button>
-                    <button>MS</button>
-                    <button class="show-save">M<i class="fa fa-caret-down"></i></button>
+                    <button data-button-type="memory-clear">MC</button>
+                    <button data-button-type="memory-read">MR</button>
+                    <button data-button-type="memory-add">M+</button>
+                    <button data-button-type="memory-sub">M-</button>
+                    <button data-button-type="memory-save">MS</button>
+                    <button class="show-save" data-button-type="memory">M<i class="fa fa-caret-down"></i></button>
                 </div>
             </div>
             <div class="button">
                 <div class="calculator-sign">
                     <div class="more-sign">
-                        <button>%</button>
-                        <button>√</button>
-                        <button>x<sup>2</sup></button>
-                        <button><sup>1</sup>/x</button>
+                        <button data-button-type="percent">%</button>
+                        <button data-button-type="square-root">√</button>
+                        <button data-button-type="square">x<sup>2</sup></button>
+                        <button data-button-type="inverse"><sup>1</sup>/x</button>
                     </div>
                     <div class="basic-sign">
                         <!--第一行-->
-                        <button>%</button>
-                        <button>CE</button>
-                        <button>C</button>
-                        <button><i class="fa fa-caret-square-o-left"></i></button>
-                        <button>÷</button>
+                        <button data-button-type="percent">%</button>
+                        <button data-button-type="clear-entry">CE</button>
+                        <button data-button-type="clear">C</button>
+                        <button data-button-type="backspace"><i class="fa fa-caret-square-o-left"></i></button>
+                        <button data-button-type="division">÷</button>
 
                         <!--第二行-->
-                        <button>√</button>
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button>×</button>
+                        <button data-button-type="square-root">√</button>
+                        <button data-button-type="seven">7</button>
+                        <button data-button-type="eight">8</button>
+                        <button data-button-type="nine">9</button>
+                        <button data-button-type="multiplication">×</button>
 
                         <!--第三行-->
-                        <button>x<sup>2</sup></button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>-</button>
+                        <button data-button-type="square">x<sup>2</sup></button>
+                        <button data-button-type="four">4</button>
+                        <button data-button-type="five">5</button>
+                        <button data-button-type="six">6</button>
+                        <button data-button-type="subtraction">-</button>
 
                         <!--第四行-->
-                        <button>x<sup>3</sup></button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>+</button>
+                        <button data-button-type="cube">x<sup>3</sup></button>
+                        <button data-button-type="one">1</button>
+                        <button data-button-type="two">2</button>
+                        <button data-button-type="three">3</button>
+                        <button data-button-type="addition">+</button>
 
                         <!--第五行-->
-                        <button><sup>1</sup>/x</button>
-                        <button>±</button>
-                        <button>0</button>
-                        <button>.</button>
-                        <button>=</button>
+                        <button data-button-type="inverse"><sup>1</sup>/x</button>
+                        <button data-button-type="positive-negative">±</button>
+                        <button data-button-type="zero">0</button>
+                        <button data-button-type="radix-point">.</button>
+                        <button data-button-type="result">=</button>
                     </div>
                 </div>
             </div>
@@ -91,5 +91,13 @@
         <li>存储</li>
     </ul>
 </div>
+
+<script src="js/calculator.js"></script>
+<script src="js/calculator.shell.js"></script>
+<script src="js/calculator.button.js"></script>
+<script src="js/calculator.calculator.js"></script>
+<script src="js/calculator.style.js"></script>
+<script src="js/calculator.screen.js"></script>
+<script src="js/calculator.memory.js"></script>
 </body>
 </html>

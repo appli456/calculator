@@ -6,15 +6,16 @@ var calculator = (function () {
     'use strict';
 
     var initModule = function () {
-
+        calculator.shell.initModule();
     };
 
     return {
         initModule : initModule
     }
-});
+}());
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log(calculator);
     calculator.initModule();
 });
 
