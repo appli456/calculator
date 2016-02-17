@@ -5,14 +5,14 @@
  */
 
 calculator.style = (function () {
-    var initModule;
+    var compatibleWebkit;
 
 
-    initModule = function () {
+    compatibleWebkit = function () {
 
     };
 
     return {
-        initModule : initModule
+        compatibleWebkit : compatibleWebkit
     }
 }());

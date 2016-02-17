@@ -16,8 +16,10 @@ calculator.shell = (function () {
     // ----------------------- 公共方法 --------------------------
 
     initModule = function () {
+
+        // Webkit系下兼容性问题
         if (IF_WEBKIT.test(bower_user_agent) && !IF_EDGE.test(bower_user_agent)) {
-            calculator.style.initModule();
+            calculator.style.compatibleWebkit();
         }
         calculator.button.initModule();
     };

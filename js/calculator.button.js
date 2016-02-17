@@ -38,14 +38,20 @@ calculator.button = (function () {
             radixPoint : 'radix-point',
             result : 'result'
         },
+        IF_MEMORY = /^(memory).+$/,
         bindButton,
         initModule;
 
     bindButton = function () {
         [].forEach.call(button, function (element){
             element.addEventListener('click', function (event) {
-                console.log(event.target.dataset.buttonType);
-
+                var button_data = event.target.dataset.buttonType;
+                console.log(button_data);
+                if (IF_MEMORY.test(button_data)) {
+                    calculator.memory.getMemoryEvent(button_data);
+                } else {
+                    calculator.calculator.getButtonType(button_data);
+                }
             });
         });
     };

@@ -3,5 +3,15 @@
  */
 
 calculator.memory = (function () {
+    var getMemoryEvent;
+
+
+    getMemoryEvent = function (event) {
+
+    };
+
+    return {
+        getMemoryEvent : getMemoryEvent
+    }
 
 } ());
