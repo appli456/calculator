@@ -38,7 +38,7 @@ calculator.button = (function () {
             radixPoint : 'radix-point',
             result : 'result'
         },
-        IF_MEMORY = /^(memory).+$/,
+        IF_MEMORY = /^(memory)(.*?)$/,
         bindButton,
         initModule;
 
