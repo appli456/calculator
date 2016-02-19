@@ -36,7 +36,8 @@ calculator.button = (function () {
             nine : 9,
             positiveNegative : 'positive-negative',
             radixPoint : 'radix-point',
-            result : 'result'
+            result : 'result',
+            trash : 'trash'
         },
         IF_MEMORY = /^(memory)(.*?)$/,
         bindButton,

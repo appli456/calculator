@@ -69,11 +69,14 @@ header .fa-history {
     top: 0;
     right: 0;
     border-left: 1px solid #dadada;
+    z-index: 1;
 }
 
-#save li {
+#save .save-header li {
     float: left;
-    padding: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 @media all and (min-width: 811px) {
@@ -110,8 +113,16 @@ header .fa-history {
 
 /*------------- 头部图标及说明 --------------*/
 .icon-kind {
-    min-height: 32px;
-    max-height: 50px;
+    display: block;
+    height: 50px;
+}
+
+.icon-kind i, .icon-kind span {
+    font-size: 22px;
+}
+.icon-kind button[data-button-type='history'] {
+    float: right;
+    clear: right;
 }
 /*------------- 结束头部图标及说明 ---------------*/
 
@@ -122,7 +133,9 @@ header .fa-history {
 }
 
 .main-interface {
+    position: relative;
     height: auto;
+    z-index: 1;
 }
 
 /*------------------屏幕------------------*/
@@ -142,9 +155,13 @@ header .fa-history {
     color: #dadada;
 }
 
-.equation-content{
+.equation-content {
     position: relative;
     float: right;
+}
+
+.equation-content i {
+    cursor: pointer;
 }
 
 .equation-arrow {
@@ -282,3 +299,81 @@ header .fa-history {
 }
 
 /*--------------- end basic sign -------------------*/
+
+/*--------------------- modal 层 -------------------*/
+
+.flex-list {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    flex-wrap: wrap;
+}
+
+.flex-list li:hover {
+    background: #DADADA;
+}
+
+#save div {
+    float: none;
+}
+
+.save-header {
+    position: absolute;
+    width: inherit;
+}
+
+.save-history, .save-memory {
+    position: absolute;
+    top: 32px;
+}
+
+.save-history p, .save-memory p {
+    padding: 0 5px 0 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 14px;
+    text-align: right;
+    font-weight: normal;
+    color: #575757;
+}
+
+.save-history span, .save-memory span {
+    padding: 5px 0;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal {
+    width: inherit;
+    height: auto;
+    overflow: auto;
+}
+
+.modal ul {
+    float: none !important;
+}
+.modal li {
+    float: none !important;
+}
+
+.trash {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.trash .fa {
+    padding: 12px 15px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.trash .fa:hover {
+    background: #DADADA;
+}
+/*--------------------- modal 层结束 --------------------*/

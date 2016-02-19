@@ -5,7 +5,14 @@
 calculator.shell = (function () {
 
     // ----------------------- 变量定义与声明 ----------------------
-    var bower_user_agent = navigator.userAgent,
+    var html_element = {
+        screen : document.querySelector('.number span'),
+        equation : document.querySelector('.equation-content span'),
+        history : document.querySelector('.save-history'),
+        memory : document.querySelector('.save-memory'),
+        save_header : document.querySelector('.save-header')
+    },
+        bower_user_agent = navigator.userAgent,
         IF_WEBKIT = /^(.+)AppleWebKit(.+)$/,
         IF_EDGE = /^(.+)Edge(.+)$/,
         initModule;

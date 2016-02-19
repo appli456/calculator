@@ -1,110 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" http-equiv="content-type">
-    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, maximum-scale=1">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="CSS/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/main.css">
-</head>
-<body>
-<div id="main">
-    <header class="icon-kind">
-        <button data-button-type="bars"><i class="fa fa-bars"></i></button>
-        <span class="pattern"></span>
-        <button data-button-type="history"><i class="fa fa-history"></i></button>
-    </header>
-    <section>
-        <div class="main-interface">
-            <div class="screen">
-                <div class="equation">
-                    <div class="equation-content">
-                        <i class="fa fa-angle-left equation-arrow"></i>
-                        <span></span>
-                        <i class="fa fa-angle-right equation-arrow"></i>
+    <head>
+        <meta charset="UTF-8" http-equiv="content-type">
+        <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, maximum-scale=1">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="CSS/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/main.css">
+    </head>
+    <body>
+        <div id="main">
+            <header class="icon-kind">
+                <button data-button-type="bars"><i class="fa fa-bars"></i></button>
+                <span class="pattern"></span>
+                <button data-button-type="history"><i class="fa fa-history"></i></button>
+            </header>
+            <section>
+                <div class="main-interface">
+                    <div class="screen">
+                        <div class="equation">
+                            <div class="equation-content">
+                                <i class="fa fa-angle-left equation-arrow"></i>
+                                <span></span>
+                                <i class="fa fa-angle-right equation-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="number">
+                            <span>0</span>
+                        </div>
+                        <div class="calculator-save">
+                            <button data-button-type="memoryClear">MC</button>
+                            <button data-button-type="memoryRead">MR</button>
+                            <button data-button-type="memoryAdd">M+</button>
+                            <button data-button-type="memorySub">M-</button>
+                            <button data-button-type="memorySave">MS</button>
+                            <button class="show-save" data-button-type="memory">M<i class="fa fa-caret-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="calculator-sign">
+                            <div class="more-sign">
+                                <button data-button-type="percent">%</button>
+                                <button data-button-type="squareRoot">√</button>
+                                <button data-button-type="square">x<sup>2</sup></button>
+                                <button data-button-type="inverse"><sup>1</sup>/x</button>
+                            </div>
+                            <div class="basic-sign">
+                                <!--第一行-->
+                                <button data-button-type="percent">%</button>
+                                <button data-button-type="clearEntry">CE</button>
+                                <button data-button-type="clear">C</button>
+                                <button data-button-type="backspace"><i class="fa fa-caret-square-o-left"></i></button>
+                                <button data-button-type="division">÷</button>
+
+                                <!--第二行-->
+                                <button data-button-type="squareRoot">√</button>
+                                <button data-button-type="seven">7</button>
+                                <button data-button-type="eight">8</button>
+                                <button data-button-type="nine">9</button>
+                                <button data-button-type="multiplication">×</button>
+
+                                <!--第三行-->
+                                <button data-button-type="square">x<sup>2</sup></button>
+                                <button data-button-type="four">4</button>
+                                <button data-button-type="five">5</button>
+                                <button data-button-type="six">6</button>
+                                <button data-button-type="subtraction">-</button>
+
+                                <!--第四行-->
+                                <button data-button-type="cube">x<sup>3</sup></button>
+                                <button data-button-type="one">1</button>
+                                <button data-button-type="two">2</button>
+                                <button data-button-type="three">3</button>
+                                <button data-button-type="addition">+</button>
+
+                                <!--第五行-->
+                                <button data-button-type="inverse"><sup>1</sup>/x</button>
+                                <button data-button-type="positiveNegative">±</button>
+                                <button data-button-type="zero">0</button>
+                                <button data-button-type="radixPoint">.</button>
+                                <button data-button-type="result">=</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="number">
-                    <span>0</span>
-                </div>
-                <div class="calculator-save">
-                    <button data-button-type="memoryClear">MC</button>
-                    <button data-button-type="memoryRead">MR</button>
-                    <button data-button-type="memoryAdd">M+</button>
-                    <button data-button-type="memorySub">M-</button>
-                    <button data-button-type="memorySave">MS</button>
-                    <button class="show-save" data-button-type="memory">M<i class="fa fa-caret-down"></i></button>
-                </div>
+            </section>
+        </div>
+        <div id="save">
+            <div class="save-header flex-list">
+                <ul>
+                    <li>历史记录</li>
+                    <li>存储</li>
+                </ul>
             </div>
-            <div class="button">
-                <div class="calculator-sign">
-                    <div class="more-sign">
-                        <button data-button-type="percent">%</button>
-                        <button data-button-type="squareRoot">√</button>
-                        <button data-button-type="square">x<sup>2</sup></button>
-                        <button data-button-type="inverse"><sup>1</sup>/x</button>
-                    </div>
-                    <div class="basic-sign">
-                        <!--第一行-->
-                        <button data-button-type="percent">%</button>
-                        <button data-button-type="clearEntry">CE</button>
-                        <button data-button-type="clear">C</button>
-                        <button data-button-type="backspace"><i class="fa fa-caret-square-o-left"></i></button>
-                        <button data-button-type="division">÷</button>
-
-                        <!--第二行-->
-                        <button data-button-type="squareRoot">√</button>
-                        <button data-button-type="seven">7</button>
-                        <button data-button-type="eight">8</button>
-                        <button data-button-type="nine">9</button>
-                        <button data-button-type="multiplication">×</button>
-
-                        <!--第三行-->
-                        <button data-button-type="square">x<sup>2</sup></button>
-                        <button data-button-type="four">4</button>
-                        <button data-button-type="five">5</button>
-                        <button data-button-type="six">6</button>
-                        <button data-button-type="subtraction">-</button>
-
-                        <!--第四行-->
-                        <button data-button-type="cube">x<sup>3</sup></button>
-                        <button data-button-type="one">1</button>
-                        <button data-button-type="two">2</button>
-                        <button data-button-type="three">3</button>
-                        <button data-button-type="addition">+</button>
-
-                        <!--第五行-->
-                        <button data-button-type="inverse"><sup>1</sup>/x</button>
-                        <button data-button-type="positiveNegative">±</button>
-                        <button data-button-type="zero">0</button>
-                        <button data-button-type="radixPoint">.</button>
-                        <button data-button-type="result">=</button>
-                    </div>
-                </div>
+            <div class="save-history modal flex-list">
+                <ul>
+                    <!--<li>-->
+                        <!--<div>-->
+                            <!--<div><p>9999999999999999 + 9999999999999999 + 6666666666666</p></div>-->
+                            <!--<div><span>100000000</span></div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="save-memory modal flex-list">
+                <ul>
+                    <li>
+                        <div><span>55555555555555555</span></div>
+                        <div>
+                            <button>MC</button>
+                            <button>M+</button>
+                            <button>M-</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="trash">
+                <button data-button-type="trash"><i class="fa fa-trash-o"></i></button>
             </div>
         </div>
-    </section>
-</div>
-<div id="save">
-    <ul>
-        <li>历史记录</li>
-        <li>存储</li>
-    </ul>
-    <div>
-        <ul></ul>
-    </div>
-    <div>
-        <ul></ul>
-    </div>
-    <i class="fa fa-trash-o"></i>
-</div>
-
-<script src="js/calculator.js"></script>
-<script src="js/calculator.shell.js"></script>
-<script src="js/calculator.button.js"></script>
-<script src="js/calculator.calculator.js"></script>
-<script src="js/calculator.style.js"></script>
-<script src="js/calculator.screen.js"></script>
-<script src="js/calculator.memory.js"></script>
-</body>
+        <script src="js/calculator.js"></script>
+        <script src="js/calculator.shell.js"></script>
+        <script src="js/calculator.button.js"></script>
+        <script src="js/calculator.calculator.js"></script>
+        <script src="js/calculator.style.js"></script>
+        <script src="js/calculator.screen.js"></script>
+        <script src="js/calculator.memory.js"></script>
+        <script src="js/calculator.interface.js"></script>
+        <script src="js/calculator.animation.js"></script>
+    </body>
 </html>
