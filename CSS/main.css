@@ -307,10 +307,23 @@ header .fa-history {
     flex-direction: row;
     flex: none;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
-.flex-list li:hover {
-    background: #DADADA;
+/*.flex-list li:hover{*/
+    /*background: #DADADA;*/
+/*}*/
+
+@media all and (min-width: 811px) {
+    .flex-list, .flex-list ul, .flex-list li {
+        width: 360px;
+    }
+}
+
+@media all and (max-width: 810px) {
+    .flex-list, .flex-list ul, .flex-list li{
+        width: 44.4%;
+    }
 }
 
 #save div {
@@ -319,8 +332,8 @@ header .fa-history {
 
 .save-header {
     position: absolute;
-    width: inherit;
 }
+
 
 .save-history, .save-memory {
     position: absolute;
@@ -338,14 +351,23 @@ header .fa-history {
 }
 
 .save-history span, .save-memory span {
-    padding: 5px 0;
+    padding: 5px 10px;
     float: right;
     font-size: 20px;
     font-weight: bold;
+    text-align: right;
 }
 
+.save-memory button {
+    float: right;
+    padding: 11px;
+    color: #0099BC;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+
 .modal {
-    width: inherit;
     height: auto;
     overflow: auto;
 }
@@ -375,5 +397,19 @@ header .fa-history {
 
 .trash .fa:hover {
     background: #DADADA;
+}
+
+.remark {
+    margin: 20px 10px 0 0;
+    font-size: 14px !important;
+    opacity: 0.5;
+}
+
+.fade {
+    opacity: 0.5;
+}
+
+.fade:hover {
+    opacity: 1;
 }
 /*--------------------- modal 层结束 --------------------*/
