@@ -44,7 +44,7 @@ calculator.calculator = (function () {
      */
     manageNumber = function (event) {
         var element = parseFloat(html_element.screen.innerHTML);
-        if (element > 99999999999999) {
+        if (element > 99999999999999 && !formerCalculator.if_symbol) {
             return;
         }
         if (element === 0 || formerCalculator.if_symbol) {
